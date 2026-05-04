@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.about-page {
+  width: 100%;
+  background: #f7f7f7;
+}
+
+/* HERO */
+.about-hero {
+  min-height: 60vh;
+  background: linear-gradient(135deg, #4e6e77, #6f9086);
+  position: relative;
+}
+
+.about-hero-overlay {
+  min-height: 60vh;
+  background: rgba(0, 0, 0, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.about-hero-content {
+  max-width: 900px;
+  color: white;
+}
+
+.about-hero-content h1 {
+  font-size: clamp(2.2rem, 5vw, 4.1rem);
+  line-height: 1.1;
+  margin-bottom: 26px;
+  font-weight: 800;
+}
+
+.about-hero-line {
+  width: 110px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.7);
+  margin: 0 auto 24px;
+}
+
+.about-hero-content p {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-style: italic;
+  color: #f4f4f4;
+}
+
+/* INTRO */
+.about-intro {
+  padding: 70px 0 40px;
+  background: #f7f7f7;
+}
+
+.about-intro-container,
+.about-values-container {
+  width: min(900px, 92%);
+  margin: 0 auto;
+}
+
+.about-intro-container > p {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #626a70;
+  text-align: justify;
+  margin-bottom: 36px;
+}
+
+.about-video-placeholder {
+  width: min(560px, 100%);
+  min-height: 260px;
+  background: #111;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* MISION Y VISION */
+.about-values-section {
+  padding: 0 0 50px;
+  background: #f7f7f7;
+}
+
+.about-divider {
+  width: 100%;
+  height: 1px;
+  background: #cfcfcf;
+  margin-bottom: 28px;
+}
+
+.about-values {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.about-value-block h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.about-value-block p {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #666;
+  text-align: justify;
+}
+
+/* SERVICIOS */
+.about-services-preview {
+  background: #edf2f2;
+  padding: 70px 0 40px;
+}
+
+.about-services-header {
+  text-align: center;
+  width: min(900px, 92%);
+  margin: 0 auto 38px;
+}
+
+.about-services-header h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 10px;
+  color: #24313d;
+}
+
+.about-services-header p {
+  color: #66717b;
+  font-size: 1rem;
+}
+
+.about-services-grid {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.about-service-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 26px 22px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  text-align: center;
+}
+
+.about-service-image {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  background: #d8d8d8;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.about-service-card h3 {
+  font-size: 1.8rem;
+  color: #29bfb0;
+  margin-bottom: 8px;
+}
+
+.about-service-tag {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 1px;
+  color: #8a8f95;
+  margin-bottom: 14px;
+}
+
+.about-service-card p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #666;
+  text-align: justify;
+}
+
+.about-services-action {
+  text-align: center;
+  margin: 28px 0 22px;
+}
+
+.about-btn-primary {
+  display: inline-block;
+  background: #35c6b4;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.about-logo-placeholder {
+  width: 110px;
+  height: 70px;
+  background: #d8d8d8;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-intro-container > p {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-hero {
+    min-height: 50vh;
+  }
+
+  .about-hero-overlay {
+    min-height: 50vh;
+  }
+
+  .about-value-block h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-video-placeholder {
+    min-height: 200px;
+  }
+}
