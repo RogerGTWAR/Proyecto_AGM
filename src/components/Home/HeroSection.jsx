@@ -1,13 +1,6 @@
-import bgHero from '../../assets/images/Home/Imagen_1_Inicio.jpeg';
-
 function HeroSection() {
   return (
-    <section
-      className="hero-section"
-      style={{
-        backgroundImage: `url(${bgHero})`,
-      }}
-    >
+    <section className="hero-section">
       <div className="hero-overlay">
         <div className="hero-content">
           <span className="hero-tag">Asesoría & Construcción S.A.</span>
