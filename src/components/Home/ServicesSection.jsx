@@ -11,17 +11,27 @@ function ServicesSection() {
 
       <div className="services-grid">
         <article className="service-card">
-          <div className="service-icon"></div>
+          <div className="service-icon">
+            <img
+              src="https://i0.wp.com/aconsani.com/wp-content/uploads/2021/11/widget-area-icon.png?resize=180%2C180&ssl=1"
+              alt="Icono de diseño"
+            />
+          </div>
           <h3>Diseño</h3>
           <p>
             Estudios y diseños para el desarrollo de perfiles técnico-económicos,
             alternativas constructivas, factibilidad y arquitectura.
           </p>
-          <button>Calculo & Modelado</button>
+          <button>Cálculo & Modelado</button>
         </article>
 
         <article className="service-card">
-          <div className="service-icon"></div>
+          <div className="service-icon">
+            <img
+              src="https://i0.wp.com/aconsani.com/wp-content/uploads/2021/11/patterns-icon.png?resize=180%2C180&ssl=1"
+              alt="Icono de construcción"
+            />
+          </div>
           <h3>Construcción</h3>
           <p>
             Ejecución de obras industriales, comerciales y públicas, incluyendo agua
@@ -31,7 +41,12 @@ function ServicesSection() {
         </article>
 
         <article className="service-card">
-          <div className="service-icon"></div>
+          <div className="service-icon">
+            <img
+              src="https://i0.wp.com/aconsani.com/wp-content/uploads/2021/11/templates-icon.png?resize=180%2C180&ssl=1"
+              alt="Icono de mantenimiento"
+            />
+          </div>
           <h3>Mantenimiento</h3>
           <p>
             Servicios de reparación y mantenimiento preventivo y correctivo en

@@ -1,0 +1,1014 @@
+/* =========================================================
+   VARIABLES DE DISEÑO
+========================================================= */
+
+:root {
+  --mant-primary: #35c6b4;
+  --mant-primary-hover: #28ae9d;
+  --mant-white: #ffffff;
+
+  --mant-card-bg: rgba(18, 60, 58, 0.72);
+  --mant-card-bg-strong: rgba(18, 60, 58, 0.84);
+  --mant-border: rgba(255, 255, 255, 0.18);
+  --mant-border-hover: rgba(53, 198, 180, 0.65);
+
+  --mant-shadow: 0 18px 45px rgba(0, 0, 0, 0.32);
+  --mant-shadow-hover: 0 24px 60px rgba(0, 0, 0, 0.45);
+  --mant-text-shadow: 0 5px 18px rgba(0, 0, 0, 1);
+
+  --mant-radius-sm: 16px;
+  --mant-radius-md: 20px;
+  --mant-radius-lg: 24px;
+
+  --mant-container: min(1500px, 94vw);
+}
+
+/* =========================================================
+   ANIMACIONES
+========================================================= */
+
+@keyframes mantFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mantFloatSoft {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes mantShine {
+  from {
+    left: -80%;
+  }
+
+  to {
+    left: 130%;
+  }
+}
+
+@keyframes mantLineGrow {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+
+  to {
+    width: 110px;
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   HERO MANTENIMIENTO
+========================================================= */
+
+.mant-hero-section {
+  min-height: auto;
+  position: relative;
+  background: transparent;
+}
+
+.mant-hero-overlay {
+  width: 100%;
+  padding: 80px 20px 60px;
+
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mant-hero-content {
+  width: min(1100px, 94vw);
+  max-width: 900px;
+  margin: 0 auto;
+
+  text-align: center;
+  color: var(--mant-white);
+
+  animation: mantFadeUp 0.9s ease both;
+}
+
+.mant-hero-content h2 {
+  max-width: 950px;
+  margin: 0 auto 14px;
+
+  font-size: clamp(3.2rem, 6.5vw, 5.7rem);
+  font-weight: 900;
+  line-height: 0.98;
+  letter-spacing: 2px;
+
+  color: var(--mant-white);
+  text-shadow: 0 8px 25px rgba(0, 0, 0, 1);
+
+  animation: mantFadeUp 1s ease both;
+}
+
+.mant-hero-content h2::after {
+  content: "";
+
+  display: block;
+
+  width: 110px;
+  height: 3px;
+
+  margin: 22px auto 0;
+
+  border-radius: 999px;
+  background: var(--mant-primary);
+
+  box-shadow: 0 0 18px rgba(53, 198, 180, 0.7);
+
+  animation: mantLineGrow 1s ease both;
+}
+
+.mant-hero-content h3 {
+  margin: 20px 0 18px;
+
+  font-size: clamp(1.5rem, 2.8vw, 2.4rem);
+  font-weight: 500;
+  font-style: italic;
+
+  color: var(--mant-white);
+  text-shadow: var(--mant-text-shadow);
+
+  animation: mantFadeUp 1.1s ease both;
+}
+
+.mant-hero-content p {
+  max-width: 720px;
+  margin: 0 auto;
+
+  font-size: 1rem;
+  line-height: 1.75;
+
+  color: var(--mant-white);
+  text-shadow: var(--mant-text-shadow);
+
+  animation: mantFadeUp 1.2s ease both;
+}
+
+/* =========================================================
+   ENCABEZADO DE TIPOS
+========================================================= */
+
+.mant-tipos-section {
+  width: var(--mant-container);
+  margin: 0 auto;
+  padding: 110px 0 65px;
+
+  background: transparent;
+}
+
+.mant-tipos-header {
+  max-width: 780px;
+  margin: 0 auto 45px;
+  padding-inline: 16px;
+
+  text-align: center;
+
+  animation: mantFadeUp 0.9s ease both;
+}
+
+.mant-tipos-header h2 {
+  margin-bottom: 14px;
+
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  font-weight: 900;
+
+  color: var(--mant-white);
+  text-shadow: 0 6px 20px rgba(0, 0, 0, 1);
+}
+
+.mant-tipos-header p {
+  font-size: 1rem;
+  line-height: 1.8;
+
+  color: var(--mant-white);
+  text-shadow: 0 5px 16px rgba(0, 0, 0, 1);
+}
+
+/* =========================================================
+   TIPOS DE MANTENIMIENTO
+========================================================= */
+
+.mant-tipos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 26px;
+  align-items: stretch;
+}
+
+.mant-tipo-card {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--mant-card-bg);
+  border: 1px solid var(--mant-border);
+  border-radius: var(--mant-radius-md);
+
+  box-shadow: var(--mant-shadow);
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  position: relative;
+  overflow: hidden;
+
+  animation: mantFadeUp 0.9s ease both;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.mant-tipo-card::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: -80%;
+
+  width: 60%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.13),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.mant-tipo-card:hover::before {
+  animation: mantShine 0.9s ease;
+}
+
+.mant-tipo-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--mant-border-hover);
+  box-shadow: var(--mant-shadow-hover);
+}
+
+.mant-tipo-img {
+  width: 100%;
+  height: 230px;
+
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.mant-tipo-img img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+  object-fit: cover;
+
+  filter: brightness(1.04) contrast(1.06) saturate(1.08);
+
+  transition:
+    transform 0.7s ease,
+    filter 0.7s ease;
+}
+
+.mant-tipo-card:hover .mant-tipo-img img {
+  transform: scale(1.08);
+  filter: brightness(0.92) contrast(1.12) saturate(1.1);
+}
+
+.mant-tipo-body {
+  padding: 28px 28px 32px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+
+  flex: 1;
+}
+
+.mant-tipo-badge {
+  align-self: flex-start;
+
+  display: inline-block;
+
+  padding: 5px 13px;
+
+  background: rgba(53, 198, 180, 0.16);
+  border: 1px solid rgba(53, 198, 180, 0.45);
+  border-radius: 999px;
+
+  color: var(--mant-primary);
+
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  text-shadow: 0 4px 14px rgba(0, 0, 0, 0.9);
+}
+
+.mant-tipo-body h3 {
+  margin: 0;
+
+  font-size: 1.35rem;
+  font-weight: 900;
+  line-height: 1.25;
+
+  color: var(--mant-white);
+  text-shadow: var(--mant-text-shadow);
+
+  transition: color 0.3s ease;
+}
+
+.mant-tipo-card:hover .mant-tipo-body h3 {
+  color: var(--mant-primary);
+}
+
+.mant-tipo-body p {
+  margin: 0;
+
+  font-size: 0.97rem;
+  line-height: 1.8;
+
+  color: var(--mant-white);
+  text-align: justify;
+  text-shadow: 0 5px 16px rgba(0, 0, 0, 1);
+}
+
+/* =========================================================
+   GRID DE SERVICIOS
+========================================================= */
+
+.mant-grid-section {
+  width: var(--mant-container);
+  margin: 0 auto;
+  padding: 20px 0 75px;
+
+  background: transparent;
+}
+
+.mant-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 28px;
+  align-items: stretch;
+}
+
+.mant-card {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--mant-card-bg);
+  border: 1px solid var(--mant-border);
+  border-radius: 18px;
+
+  box-shadow: var(--mant-shadow);
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  position: relative;
+  overflow: hidden;
+
+  animation: mantFadeUp 0.9s ease both;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.mant-card::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: -80%;
+
+  width: 60%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.13),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.mant-card:hover::before {
+  animation: mantShine 0.9s ease;
+}
+
+.mant-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--mant-border-hover);
+  box-shadow: var(--mant-shadow-hover);
+}
+
+.mant-card-image {
+  width: 100%;
+  height: 210px;
+
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.mant-card-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+  object-fit: cover;
+
+  filter: brightness(1.04) contrast(1.06) saturate(1.08);
+
+  transition:
+    transform 0.7s ease,
+    filter 0.7s ease;
+}
+
+.mant-card:hover .mant-card-image img {
+  transform: scale(1.08);
+  filter: brightness(0.92) contrast(1.12) saturate(1.1);
+}
+
+.mant-card-body {
+  padding: 24px 24px 28px;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.mant-card-body h3 {
+  margin-bottom: 12px;
+
+  font-size: 1.3rem;
+  font-weight: 900;
+  line-height: 1.25;
+
+  color: var(--mant-primary);
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.mant-card-body p {
+  margin: 0;
+
+  font-size: 0.96rem;
+  line-height: 1.8;
+
+  color: var(--mant-white);
+  text-align: justify;
+  text-shadow: 0 5px 16px rgba(0, 0, 0, 1);
+}
+
+/* =========================================================
+   BANNER CTA
+========================================================= */
+
+.mant-cta-banner {
+  width: var(--mant-container);
+  margin: 0 auto 85px;
+  padding: 54px 60px;
+
+  background: var(--mant-card-bg-strong);
+  border: 1px solid var(--mant-border);
+  border-radius: var(--mant-radius-lg);
+
+  box-shadow: var(--mant-shadow);
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  position: relative;
+  overflow: hidden;
+
+  animation: mantFadeUp 0.9s ease both;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.mant-cta-banner::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: -80%;
+
+  width: 60%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.13),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+  pointer-events: none;
+}
+
+.mant-cta-banner:hover::before {
+  animation: mantShine 0.9s ease;
+}
+
+.mant-cta-banner:hover {
+  transform: translateY(-8px);
+  border-color: var(--mant-border-hover);
+  box-shadow: var(--mant-shadow-hover);
+}
+
+.mant-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+  flex-wrap: wrap;
+
+  position: relative;
+  z-index: 1;
+}
+
+.mant-cta-text {
+  flex: 1;
+}
+
+.mant-cta-text span {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  color: var(--mant-primary);
+
+  font-size: 0.88rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  text-shadow: 0 4px 14px rgba(0, 0, 0, 0.9);
+
+  animation: mantFloatSoft 3.5s ease-in-out infinite;
+}
+
+.mant-cta-text h2 {
+  margin-bottom: 12px;
+
+  font-size: clamp(1.9rem, 3.5vw, 3.1rem);
+  font-weight: 900;
+  line-height: 1.1;
+
+  color: var(--mant-white);
+  text-shadow: 0 6px 20px rgba(0, 0, 0, 1);
+}
+
+.mant-cta-text p {
+  margin: 0;
+
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.7;
+
+  color: var(--mant-white);
+  text-shadow: 0 5px 16px rgba(0, 0, 0, 1);
+}
+
+.mant-cta-btn {
+  flex-shrink: 0;
+
+  padding: 16px 36px !important;
+
+  border-radius: 10px !important;
+
+  background: var(--mant-primary) !important;
+  color: var(--mant-white) !important;
+  border: none !important;
+
+  font-size: 1rem !important;
+  font-weight: 900 !important;
+
+  white-space: nowrap;
+  text-decoration: none !important;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.mant-cta-btn::after {
+  content: "→";
+  transition: transform 0.3s ease;
+}
+
+.mant-cta-btn:hover {
+  background: var(--mant-primary-hover) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(53, 198, 180, 0.28);
+}
+
+.mant-cta-btn:hover::after {
+  transform: translateX(5px);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1024px) {
+  .mant-hero-overlay {
+    padding: 70px 20px 55px;
+  }
+
+  .mant-tipos-grid,
+  .mant-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mant-tipo-img,
+  .mant-card-image {
+    height: 210px;
+  }
+}
+
+@media (max-width: 900px) {
+  .mant-cta-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mant-cta-text span {
+    text-align: center;
+  }
+
+  .mant-cta-text {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .mant-hero-overlay {
+    padding: 55px 18px 45px;
+  }
+
+  .mant-hero-content h2 {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+
+  .mant-hero-content h3 {
+    font-size: clamp(1.2rem, 6vw, 2rem);
+  }
+
+  .mant-hero-content p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .mant-tipos-section {
+    padding: 45px 0 55px;
+  }
+
+  .mant-grid-section {
+    padding-bottom: 60px;
+  }
+
+  .mant-card-body p,
+  .mant-tipo-body p {
+    text-align: left;
+  }
+
+  .mant-cta-banner {
+    padding: 42px 28px;
+  }
+}
+
+@media (max-width: 580px) {
+  .mant-tipos-grid,
+  .mant-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mant-hero-overlay {
+    padding: 40px 14px 38px;
+  }
+
+  .mant-hero-content h2 {
+    font-size: 2.45rem;
+    letter-spacing: 1px;
+  }
+
+  .mant-hero-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .mant-hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .mant-tipo-img,
+  .mant-card-image {
+    height: 190px;
+  }
+
+  .mant-tipo-body,
+  .mant-card-body {
+    padding: 24px 22px 28px;
+  }
+
+  .mant-cta-banner {
+    margin-bottom: 65px;
+    padding: 36px 22px;
+  }
+
+  .mant-cta-btn {
+    width: 100%;
+    max-width: 310px;
+  }
+}
+
+/* =========================================================
+   ACCESIBILIDAD
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =========================================================
+   IMAGEN DEL HERO MANTENIMIENTO
+========================================================= */
+
+.mant-hero-image-card {
+  width: min(1000px, 88vw);
+  height: 455px;
+  transform: translateX(-110px);
+
+  margin: 34px auto 0;
+
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 22px;
+
+  background: rgba(18, 60, 58, 0.72);
+  border: 1px solid rgba(53, 198, 180, 0.45);
+
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+
+  cursor: pointer;
+
+  animation: mantFadeUp 1.4s ease both;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.mant-hero-image-card::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: -80%;
+
+  width: 60%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.18),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  z-index: 2;
+  pointer-events: none;
+}
+
+.mant-hero-image-card::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.32),
+    transparent 60%
+  );
+
+  z-index: 1;
+  pointer-events: none;
+}
+
+.mant-hero-image-card:hover {
+  transform: translateX(-110px) translateY(-8px);
+  border-color: #35c6b4;
+
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.52),
+    0 0 35px rgba(53, 198, 180, 0.22);
+}
+
+.mant-hero-image-card:hover::before {
+  animation: mantShine 0.9s ease;
+}
+
+.mant-hero-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  filter: brightness(1.06) contrast(1.06) saturate(1.08);
+
+  transition:
+    transform 0.7s ease,
+    filter 0.7s ease;
+}
+
+.mant-hero-image-card:hover .mant-hero-image {
+  transform: scale(1.06);
+  filter: brightness(1) contrast(1.12) saturate(1.1);
+}
+
+/* Responsive de la imagen del hero */
+@media (max-width: 1024px) {
+  .mant-hero-image-card {
+    height: 390px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mant-hero-image-card {
+    width: min(680px, 92vw);
+    height: 310px;
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 520px) {
+  .mant-hero-image-card {
+    height: 230px;
+  }
+}
+
+/* =========================================================
+   IMAGEN DEL HERO MANTENIMIENTO 
+========================================================= */
+
+.mant-hero-image-card {
+  width: min(5000px, 100%);
+  height: 470px;
+
+  margin: 15px auto 0;
+
+  border-radius: 20px;
+  overflow: hidden;
+
+  background: rgba(18, 60, 58, 0.72);
+  border: 1px solid rgba(53, 198, 180, 0.35);
+
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+
+  position: relative;
+
+  cursor: pointer;
+
+  animation: mantFadeUp 1s ease both;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.mant-hero-image-card::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: -80%;
+
+  width: 60%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.18),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  z-index: 2;
+  pointer-events: none;
+}
+
+.mant-hero-image-card::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.32),
+    transparent 60%
+  );
+
+  z-index: 1;
+  pointer-events: none;
+}
+
+.mant-hero-image-card:hover::before {
+  animation: mantShine 0.9s ease;
+}
+
+.mant-hero-image-card:hover {
+  transform: translateY(-6px);
+  border-color: #35c6b4;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.52);
+}
+
+.mant-hero-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  filter: brightness(1.08) contrast(1.05) saturate(1.08);
+
+  transition:
+    transform 0.7s ease,
+    filter 0.7s ease;
+}
+
+.mant-hero-image-card:hover .mant-hero-image {
+  transform: scale(1.05);
+  filter: brightness(1) contrast(1.12) saturate(1.08);
+}

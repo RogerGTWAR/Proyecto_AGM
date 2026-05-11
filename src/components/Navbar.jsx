@@ -1,41 +1,55 @@
 import { NavLink } from 'react-router-dom';
-import logo from '../assets/images/ACONSA.jpg';
+
+const logo =
+  'https://i0.wp.com/aconsani.com/wp-content/uploads/2026/03/ACONSA-Nicaragua.jpg?resize=264%2C300&ssl=1';
 
 function Navbar() {
   return (
     <header className="navbar">
       <div className="navbar-container">
-
-        <div className="navbar-left">
-          <img src={logo} alt="Logo ACONSA" className="logo-img" />
+        <NavLink to="/" className="navbar-brand">
+          <div className="logo-box">
+            <img src={logo} alt="Logo ACONSA" className="logo-img" />
+          </div>
 
           <div className="brand-text">
             <h1>Asesoría & Construcción S.A.</h1>
+            <span>ACONSA</span>
           </div>
-        </div>
+        </NavLink>
 
-        <nav className="navbar-right">
+        <nav className="navbar-menu">
+          <NavLink to="/" className="nav-link">
+            Inicio
+          </NavLink>
 
-          <div className="nav-row">
-            <NavLink to="/" className="nav-link">
-              Inicio
-            </NavLink>
+          <NavLink to="/nosotros" className="nav-link">
+            Nosotros
+          </NavLink>
 
-            <NavLink to="/nosotros" className="nav-link">
-              Nosotros
-            </NavLink>
+          <NavLink to="/contacto" className="nav-link">
+            Contacto
+          </NavLink>
 
-            <a href="#contacto">Contacto</a>
-            <a href="#servicios">Diseño</a>
-            <a href="#servicios">Construcción</a>
-          </div>
+          <a href="#servicios" className="nav-link">
+            Diseño
+          </a>
 
-          <div className="nav-row secondary">
-            <a href="#servicios">Geotecnia</a>
-            <a href="#servicios">Mantenimiento & Reparación</a>
-            <a href="#contacto">Blog</a>
-          </div>
+          <a href="#servicios" className="nav-link">
+            Construcción
+          </a>
 
+          <a href="#servicios" className="nav-link">
+            Geotecnia
+          </a>
+
+          <a href="/mantenimiento" className="nav-link">
+            Mantenimiento
+          </a>
+
+          <a href="#blog" className="nav-link">
+            Blog
+          </a>
         </nav>
       </div>
     </header>

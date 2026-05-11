@@ -10,6 +10,7 @@ import AboutSection from '../components/Home/AboutSection';
 import VisitUsSection from '../components/Home/VisitUsSection';
 import Footer from '../components/Footer';
 import Carrusel from '../components/Home/Carrusel';
+import StatsSection from '../components/Home/StatsSection';
 
 function Home() {
   return (
@@ -26,6 +27,7 @@ function Home() {
       <IntroBanner />
       <AboutSection />
       <VisitUsSection />
+      <StatsSection />
       <Footer />
     </main>
     
