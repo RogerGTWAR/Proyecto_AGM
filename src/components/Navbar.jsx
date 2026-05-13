@@ -35,17 +35,17 @@ function Navbar() {
             Diseño
           </a>
 
-          <a href="#servicios" className="nav-link">
+          <NavLink to="/construccion" className="nav-link">
             Construcción
-          </a>
+          </NavLink>
 
           <a href="#servicios" className="nav-link">
             Geotecnia
           </a>
 
-          <a href="/mantenimiento" className="nav-link">
+          <NavLink to="/mantenimiento" className="nav-link">
             Mantenimiento
-          </a>
+          </NavLink>
 
           <a href="#blog" className="nav-link">
             Blog

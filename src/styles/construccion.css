@@ -1,0 +1,434 @@
+/* ===================================================
+   HERO
+=================================================== */
+.const-hero-section {
+  min-height: auto;
+  position: relative;
+  background: transparent;
+}
+
+.const-hero-overlay {
+  width: 100%;
+  padding: 120px 20px 70px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.const-hero-content {
+  width: min(1500px, 94vw);
+  margin: 0 auto;
+  max-width: 820px;
+  text-align: center;
+  color: #ffffff;
+  animation: heroFadeUp 0.9s ease both;
+}
+
+.const-hero-content h2 {
+  font-size: clamp(3.2rem, 7vw, 6rem);
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 6px;
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-shadow: 0 6px 20px rgba(0, 0, 0, 1);
+}
+
+.const-hero-content h3 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-style: italic;
+  color: #ffffff;
+  text-shadow: 0 5px 18px rgba(0, 0, 0, 1);
+}
+
+.const-hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto 28px;
+  color: #ffffff;
+  text-shadow: 0 5px 18px rgba(0, 0, 0, 1);
+}
+
+/* ===================================================
+   INTRO — Construyendo tus ideas
+=================================================== */
+.const-intro-section {
+  width: min(1500px, 94vw);
+  margin: 0 auto;
+  padding: 20px 0 70px;
+}
+
+.const-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.const-intro-content {
+  background: rgba(18, 60, 58, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  padding: 60px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  animation: fadeUp 0.9s ease both;
+}
+
+.const-intro-content h2 {
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 900;
+  line-height: 1.1;
+  color: #ffffff;
+  text-shadow: 0 6px 20px rgba(0, 0, 0, 1);
+  margin: 0;
+}
+
+.const-intro-content p {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: #ffffff;
+  text-align: justify;
+  text-shadow: 0 4px 14px rgba(0, 0, 0, 0.9);
+  margin: 0;
+}
+
+.const-intro-img-box {
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 420px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.32);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  animation: fadeUp 0.9s ease both;
+}
+
+.const-intro-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.const-intro-img-box:hover img {
+  transform: scale(1.04);
+}
+
+/* ===================================================
+   SERVICIOS PRINCIPALES — Grid 3 columnas
+=================================================== */
+.const-servicios-section {
+  width: min(1500px, 94vw);
+  margin: 0 auto;
+  padding: 0 0 70px;
+  background: transparent;
+}
+
+.const-servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.const-servicio-card {
+  background: rgba(18, 60, 58, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  animation: fadeUp 0.9s ease both;
+}
+
+.const-servicio-card:hover {
+  transform: translateY(-8px);
+  border-color: #35c6b4;
+}
+
+.const-servicio-img {
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.const-servicio-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.const-servicio-card:hover .const-servicio-img img {
+  transform: scale(1.06);
+}
+
+.const-servicio-body {
+  padding: 26px 24px 28px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.const-servicio-body h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #35c6b4;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+  margin: 0;
+}
+
+.const-servicio-body p {
+  font-size: 0.97rem;
+  line-height: 1.75;
+  color: #ffffff;
+  text-align: justify;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
+  flex: 1;
+  margin: 0;
+}
+
+.const-card-btn {
+  margin-top: auto;
+  font-size: 0.85rem !important;
+  padding: 11px 18px !important;
+}
+
+/* ===================================================
+   SERVICIOS AUXILIARES — 5 columnas
+=================================================== */
+.const-aux-section {
+  width: min(1500px, 94vw);
+  margin: 0 auto;
+  padding: 0 0 70px;
+}
+
+.const-aux-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.const-aux-card {
+  background: rgba(18, 60, 58, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  animation: fadeUp 0.9s ease both;
+}
+
+.const-aux-card:hover {
+  transform: translateY(-6px);
+  border-color: #35c6b4;
+}
+
+/* Imagen auxiliar */
+.const-aux-img {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.const-aux-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.const-aux-card:hover .const-aux-img img {
+  transform: scale(1.07);
+}
+
+/* Cuerpo auxiliar */
+.const-aux-body {
+  padding: 20px 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.const-aux-body h3 {
+  font-size: 0.88rem;
+  font-weight: 900;
+  color: #35c6b4;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+  margin: 0;
+}
+
+.const-aux-body p {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: #ffffff;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
+  flex: 1;
+  margin: 0;
+}
+
+.const-aux-btn {
+  margin-top: auto;
+  font-size: 0.82rem !important;
+  padding: 9px 20px !important;
+  width: 100%;
+  text-align: center;
+}
+
+/* ===================================================
+   POR QUÉ ELEGIR ACONSA — 3 columnas
+=================================================== */
+.const-porque-section {
+  width: min(1500px, 94vw);
+  margin: 0 auto;
+  padding: 0 0 70px;
+}
+
+.const-porque-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.const-porque-card {
+  background: rgba(18, 60, 58, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  animation: fadeUp 0.9s ease both;
+}
+
+.const-porque-card:hover {
+  transform: translateY(-6px);
+  border-color: #35c6b4;
+}
+
+/* Imagen porque */
+.const-porque-img {
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.const-porque-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.const-porque-card:hover .const-porque-img img {
+  transform: scale(1.06);
+}
+
+/* Cuerpo porque */
+.const-porque-body {
+  padding: 28px 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.const-porque-body h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #35c6b4;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+  margin: 0;
+}
+
+.const-porque-body p {
+  font-size: 0.97rem;
+  line-height: 1.8;
+  color: #ffffff;
+  text-align: justify;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
+  margin: 0;
+}
+
+/* ===================================================
+   BANNER CTA — hereda de mantenimiento.css
+=================================================== */
+.const-banner {
+  margin-bottom: 80px;
+}
+
+/* ===================================================
+   RESPONSIVE
+=================================================== */
+@media (max-width: 1100px) {
+  .const-aux-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .const-servicios-grid,
+  .const-porque-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .const-intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .const-intro-img-box {
+    min-height: 300px;
+  }
+
+  .const-aux-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .const-servicios-grid,
+  .const-porque-grid,
+  .const-aux-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .const-hero-content h2 {
+    font-size: 2.8rem;
+  }
+
+  .const-servicio-img {
+    height: 170px;
+  }
+
+  .const-intro-content {
+    padding: 36px 24px;
+  }
+}

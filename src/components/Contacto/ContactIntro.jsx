@@ -1,4 +1,4 @@
-import aboutImage from "../../assets/images/Nosotros/Imagen_2_Nosotros.png";
+import aboutImage from "../../assets/images/Home/Imagen_12_Inicio.jpeg";
 
 function ContactIntro() {
   return (

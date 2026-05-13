@@ -1168,3 +1168,44 @@
 .experience-list {
   margin-bottom: 10px;
 }
+
+.contact-info-card {
+  padding: 42px 36px;
+  text-align: center;
+}
+
+.contact-info-title {
+  display: block;
+  text-align: center;
+}
+
+.contact-info-item {
+  display: grid;
+  grid-template-columns: 70px 1fr 70px;
+  align-items: center;
+
+  gap: 16px;
+  padding-bottom: 22px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.contact-info-item .contact-icon {
+  grid-column: 1;
+  justify-self: center;
+}
+
+.contact-info-item > div {
+  grid-column: 2;
+  text-align: center;
+}
+
+.contact-info-item h3 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.contact-info-item p,
+.contact-info-item a {
+  text-align: center;
+}

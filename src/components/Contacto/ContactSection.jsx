@@ -10,7 +10,11 @@ function ContactSection() {
 
           <div className="contact-info-list">
             <div className="contact-info-item">
-              <span className="contact-icon">📍</span>
+              <img
+                src="https://static.vecteezy.com/system/resources/previews/005/196/599/non_2x/gps-map-navigation-direction-solid-icon-illustration-logo-template-suitable-for-many-purposes-free-vector.jpg"
+                alt="Dirección"
+                className="contact-icon"
+              />
 
               <div>
                 <h3>Dirección</h3>
@@ -22,9 +26,12 @@ function ContactSection() {
                 </p>
               </div>
             </div>
-
             <div className="contact-info-item">
-              <span className="contact-icon">✉️</span>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2VyFpk0L0vYEIYBVACq5T0A-hvf8xXgxh-A&s"
+                alt="Correo"
+                className="contact-icon"
+              />
 
               <div>
                 <h3>Correo</h3>
@@ -38,7 +45,11 @@ function ContactSection() {
             </div>
 
             <div className="contact-info-item">
-              <span className="contact-icon">📞</span>
+              <img
+                src="https://static.vecteezy.com/system/resources/previews/003/720/498/non_2x/phone-icon-telephone-icon-symbol-for-app-and-messenger-vector.jpg"
+                alt="Teléfono"
+                className="contact-icon"
+              />
 
               <div>
                 <h3>Teléfono</h3>
@@ -52,7 +63,11 @@ function ContactSection() {
             </div>
 
             <div className="contact-info-item">
-              <span className="contact-icon">🕒</span>
+              <img
+                src="https://static.vecteezy.com/system/resources/previews/003/738/373/non_2x/time-schedule-icon-free-vector.jpg"
+                alt="Horario"
+                className="contact-icon"
+              />
 
               <div>
                 <h3>Horario</h3>
